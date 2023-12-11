@@ -14,5 +14,16 @@
       ctx.font = "48px serif";
       ctx.strokeText("Hello world", 10, 50);
    }
+
+
+    // Alternative to load event
+document.onreadystatechange = () => {
+  if (document.readyState === "complete") {
+   draw();
+   console.log(`called local draw() function.`);
+  }
+};
+
+    
   </script>
 </html>
